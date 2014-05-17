@@ -24,3 +24,194 @@ Sat May 17 22:30:05 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on inte
 Sat May 17 22:30:05 2014 - *** uWSGI is running in multiple interpreter mode ***
 Sat May 17 22:30:05 2014 - spawned uWSGI master process (pid: 2655)
 Sat May 17 22:30:05 2014 - spawned uWSGI worker 1 (pid: 2675, cores: 1)
+Traceback (most recent call last):
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 44, in load_middleware
+    for middleware_path in settings.MIDDLEWARE_CLASSES:
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+    % (self.SETTINGS_MODULE, e)
+ImportError: Could not import settings 'settings' (Is it on sys.path? Is there an import error in the settings file?): No module named settings
+[pid: 2675|app: 0|req: 1/1] 95.91.204.108 () {44 vars in 766 bytes} [Sat May 17 23:55:29 2014] GET / => generated 0 bytes in 3 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 44, in load_middleware
+    for middleware_path in settings.MIDDLEWARE_CLASSES:
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+    % (self.SETTINGS_MODULE, e)
+ImportError: Could not import settings 'settings' (Is it on sys.path? Is there an import error in the settings file?): No module named settings
+[pid: 2675|app: 0|req: 2/2] 95.91.204.108 () {44 vars in 717 bytes} [Sat May 17 23:55:30 2014] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 44, in load_middleware
+    for middleware_path in settings.MIDDLEWARE_CLASSES:
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+    % (self.SETTINGS_MODULE, e)
+ImportError: Could not import settings 'settings' (Is it on sys.path? Is there an import error in the settings file?): No module named settings
+[pid: 2675|app: 0|req: 3/3] 95.91.204.108 () {44 vars in 766 bytes} [Sat May 17 23:55:44 2014] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 44, in load_middleware
+    for middleware_path in settings.MIDDLEWARE_CLASSES:
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/hosting_volant247/projects/realtag/env/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+    % (self.SETTINGS_MODULE, e)
+ImportError: Could not import settings 'settings' (Is it on sys.path? Is there an import error in the settings file?): No module named settings
+[pid: 2675|app: 0|req: 4/4] 95.91.204.108 () {44 vars in 717 bytes} [Sat May 17 23:55:45 2014] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Sat May 17 23:56:00 2014 - *** /home/hosting_volant247/projects/realtag/restart.txt has been touched... grace them all !!! ***
+Sat May 17 23:56:00 2014 - ...gracefully killing workers...
+Sat May 17 23:56:00 2014 - Gracefully killing worker 1 (pid: 2675)...
+Sat May 17 23:56:01 2014 - binary reloading uWSGI...
+Sat May 17 23:56:01 2014 - chdir() to /var/www/home/hosting_volant247/projects/realtag
+Sat May 17 23:56:01 2014 - closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+Sat May 17 23:56:01 2014 - found fd 3 mapped to socket 0 (/var/sockets/hosting_volant247/realtag.volant247.sock)
+Sat May 17 23:56:01 2014 - running /usr/bin/uwsgi-core
+[uWSGI] getting INI configuration from /usr/share/uwsgi/conf/default.ini
+[uWSGI] getting INI configuration from /etc/uwsgi/realtag.volant247.ini
+Sat May 17 23:56:01 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Sat May 17 23:56:01 2014] ***
+Sat May 17 23:56:01 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Sat May 17 23:56:01 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.57-3+deb7u1
+Sat May 17 23:56:01 2014 - nodename: sulfur
+Sat May 17 23:56:01 2014 - machine: x86_64
+Sat May 17 23:56:01 2014 - clock source: unix
+Sat May 17 23:56:01 2014 - detected number of CPU cores: 16
+Sat May 17 23:56:01 2014 - current working directory: /var/www/home/hosting_volant247/projects/realtag
+Sat May 17 23:56:01 2014 - writing pidfile to /var/run/uwsgi/realtag.volant247.pid
+Sat May 17 23:56:01 2014 - detected binary path: /usr/bin/uwsgi-core
+Sat May 17 23:56:01 2014 - your processes number limit is 274018
+Sat May 17 23:56:01 2014 - your memory page size is 4096 bytes
+Sat May 17 23:56:01 2014 - detected max file descriptor number: 1024
+Sat May 17 23:56:01 2014 - lock engine: pthread robust mutexes
+Sat May 17 23:56:01 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/realtag.volant247.sock fd 4
+Sat May 17 23:56:01 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Sat May 17 23:56:01 2014 - Set PythonHome to /home/hosting_volant247/projects/realtag/env
+Sat May 17 23:56:01 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Sat May 17 23:56:01 2014 - Python main interpreter initialized at 0x246b6d0
+Sat May 17 23:56:01 2014 - your server socket listen backlog is limited to 100 connections
+Sat May 17 23:56:01 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Sat May 17 23:56:01 2014 - *** Operational MODE: single process ***
+Sat May 17 23:56:01 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x246b6d0 pid: 10406 (default app)
+Sat May 17 23:56:01 2014 - *** uWSGI is running in multiple interpreter mode ***
+Sat May 17 23:56:01 2014 - spawned uWSGI master process (pid: 10406)
+Sat May 17 23:56:01 2014 - spawned uWSGI worker 1 (pid: 10410, cores: 1)
+Sat May 17 23:56:09 2014 - SIGINT/SIGQUIT received...killing workers...
+Sat May 17 23:56:10 2014 - goodbye to uWSGI.
+Sat May 17 23:56:10 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Sat May 17 23:56:10 2014] ***
+Sat May 17 23:56:10 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Sat May 17 23:56:10 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.57-3+deb7u1
+Sat May 17 23:56:10 2014 - nodename: sulfur
+Sat May 17 23:56:10 2014 - machine: x86_64
+Sat May 17 23:56:10 2014 - clock source: unix
+Sat May 17 23:56:10 2014 - detected number of CPU cores: 16
+Sat May 17 23:56:10 2014 - current working directory: /var/www/home/hosting_volant247/projects/realtag
+Sat May 17 23:56:10 2014 - writing pidfile to /var/run/uwsgi/realtag.volant247.pid
+Sat May 17 23:56:10 2014 - detected binary path: /usr/bin/uwsgi-core
+Sat May 17 23:56:10 2014 - your processes number limit is 274018
+Sat May 17 23:56:10 2014 - your memory page size is 4096 bytes
+Sat May 17 23:56:10 2014 - detected max file descriptor number: 1024
+Sat May 17 23:56:10 2014 - lock engine: pthread robust mutexes
+Sat May 17 23:56:10 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/realtag.volant247.sock fd 3
+Sat May 17 23:56:10 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Sat May 17 23:56:10 2014 - Set PythonHome to /home/hosting_volant247/projects/realtag/env
+Sat May 17 23:56:10 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Sat May 17 23:56:10 2014 - Python main interpreter initialized at 0x25e1b10
+Sat May 17 23:56:10 2014 - your server socket listen backlog is limited to 100 connections
+Sat May 17 23:56:10 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Sat May 17 23:56:10 2014 - *** Operational MODE: single process ***
+Sat May 17 23:56:11 2014 - WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25e1b10 pid: 10615 (default app)
+Sat May 17 23:56:11 2014 - *** uWSGI is running in multiple interpreter mode ***
+Sat May 17 23:56:11 2014 - spawned uWSGI master process (pid: 10615)
+Sat May 17 23:56:11 2014 - spawned uWSGI worker 1 (pid: 10624, cores: 1)
+[pid: 10624|app: 0|req: 1/1] 95.91.204.108 () {46 vars in 797 bytes} [Sat May 17 19:56:33 2014] GET / => generated 0 bytes in 105 msecs (HTTP/1.1 301) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 2/2] 95.91.204.108 () {46 vars in 803 bytes} [Sat May 17 19:56:33 2014] GET /ru/ => generated 85915 bytes in 135 msecs (HTTP/1.1 500) 3 headers in 114 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 3/3] 95.91.204.108 () {44 vars in 717 bytes} [Sat May 17 19:56:34 2014] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 191 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 4/4] 95.91.204.108 () {44 vars in 723 bytes} [Sat May 17 19:56:35 2014] GET /ru/favicon.ico => generated 97619 bytes in 102 msecs (HTTP/1.1 500) 3 headers in 114 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 5/5] 95.91.204.108 () {46 vars in 803 bytes} [Sat May 17 19:59:37 2014] GET /ru/ => generated 97929 bytes in 217 msecs (HTTP/1.1 500) 3 headers in 114 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 6/6] 95.91.204.108 () {44 vars in 723 bytes} [Sat May 17 19:59:38 2014] GET /ru/favicon.ico => generated 2848 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10624|app: 0|req: 7/7] 95.91.204.108 () {46 vars in 803 bytes} [Sat May 17 20:02:21 2014] GET /ru/ => generated 97929 bytes in 115 msecs (HTTP/1.1 500) 3 headers in 114 bytes (1 switches on core 0)
+Sun May 18 00:02:33 2014 - *** /home/hosting_volant247/projects/realtag/restart.txt has been touched... grace them all !!! ***
+Sun May 18 00:02:33 2014 - ...gracefully killing workers...
+Sat May 17 20:02:33 2014 - Gracefully killing worker 1 (pid: 10624)...
+Sun May 18 00:02:34 2014 - binary reloading uWSGI...
+Sun May 18 00:02:34 2014 - chdir() to /var/www/home/hosting_volant247/projects/realtag
+Sun May 18 00:02:34 2014 - closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+Sun May 18 00:02:34 2014 - found fd 3 mapped to socket 0 (/var/sockets/hosting_volant247/realtag.volant247.sock)
+Sun May 18 00:02:34 2014 - running /usr/bin/uwsgi-core
+[uWSGI] getting INI configuration from /usr/share/uwsgi/conf/default.ini
+[uWSGI] getting INI configuration from /etc/uwsgi/realtag.volant247.ini
+Sun May 18 00:02:34 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Sun May 18 00:02:34 2014] ***
+Sun May 18 00:02:34 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Sun May 18 00:02:34 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.57-3+deb7u1
+Sun May 18 00:02:34 2014 - nodename: sulfur
+Sun May 18 00:02:34 2014 - machine: x86_64
+Sun May 18 00:02:34 2014 - clock source: unix
+Sun May 18 00:02:34 2014 - detected number of CPU cores: 16
+Sun May 18 00:02:34 2014 - current working directory: /var/www/home/hosting_volant247/projects/realtag
+Sun May 18 00:02:34 2014 - writing pidfile to /var/run/uwsgi/realtag.volant247.pid
+Sun May 18 00:02:34 2014 - detected binary path: /usr/bin/uwsgi-core
+Sun May 18 00:02:34 2014 - your processes number limit is 274018
+Sun May 18 00:02:34 2014 - your memory page size is 4096 bytes
+Sun May 18 00:02:34 2014 - detected max file descriptor number: 1024
+Sun May 18 00:02:34 2014 - lock engine: pthread robust mutexes
+Sun May 18 00:02:34 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/realtag.volant247.sock fd 4
+Sun May 18 00:02:34 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Sun May 18 00:02:34 2014 - Set PythonHome to /home/hosting_volant247/projects/realtag/env
+Sun May 18 00:02:34 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Sun May 18 00:02:34 2014 - Python main interpreter initialized at 0xcb96d0
+Sun May 18 00:02:34 2014 - your server socket listen backlog is limited to 100 connections
+Sun May 18 00:02:34 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Sun May 18 00:02:34 2014 - *** Operational MODE: single process ***
+Sun May 18 00:02:34 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xcb96d0 pid: 12682 (default app)
+Sun May 18 00:02:34 2014 - *** uWSGI is running in multiple interpreter mode ***
+Sun May 18 00:02:34 2014 - spawned uWSGI master process (pid: 12682)
+Sun May 18 00:02:34 2014 - spawned uWSGI worker 1 (pid: 12683, cores: 1)
+Sun May 18 00:02:43 2014 - SIGINT/SIGQUIT received...killing workers...
+Sun May 18 00:02:44 2014 - goodbye to uWSGI.
+Sun May 18 00:02:44 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Sun May 18 00:02:44 2014] ***
+Sun May 18 00:02:44 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Sun May 18 00:02:44 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.57-3+deb7u1
+Sun May 18 00:02:44 2014 - nodename: sulfur
+Sun May 18 00:02:44 2014 - machine: x86_64
+Sun May 18 00:02:44 2014 - clock source: unix
+Sun May 18 00:02:44 2014 - detected number of CPU cores: 16
+Sun May 18 00:02:44 2014 - current working directory: /var/www/home/hosting_volant247/projects/realtag
+Sun May 18 00:02:44 2014 - writing pidfile to /var/run/uwsgi/realtag.volant247.pid
+Sun May 18 00:02:44 2014 - detected binary path: /usr/bin/uwsgi-core
+Sun May 18 00:02:44 2014 - your processes number limit is 274018
+Sun May 18 00:02:44 2014 - your memory page size is 4096 bytes
+Sun May 18 00:02:44 2014 - detected max file descriptor number: 1024
+Sun May 18 00:02:44 2014 - lock engine: pthread robust mutexes
+Sun May 18 00:02:44 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/realtag.volant247.sock fd 3
+Sun May 18 00:02:44 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Sun May 18 00:02:44 2014 - Set PythonHome to /home/hosting_volant247/projects/realtag/env
+Sun May 18 00:02:44 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Sun May 18 00:02:44 2014 - Python main interpreter initialized at 0x1d7fb10
+Sun May 18 00:02:44 2014 - your server socket listen backlog is limited to 100 connections
+Sun May 18 00:02:44 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Sun May 18 00:02:44 2014 - *** Operational MODE: single process ***
+Sun May 18 00:02:44 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1d7fb10 pid: 12865 (default app)
+Sun May 18 00:02:44 2014 - *** uWSGI is running in multiple interpreter mode ***
+Sun May 18 00:02:44 2014 - spawned uWSGI master process (pid: 12865)
+Sun May 18 00:02:44 2014 - spawned uWSGI worker 1 (pid: 12873, cores: 1)
+[pid: 12873|app: 0|req: 1/1] 95.91.204.108 () {46 vars in 803 bytes} [Sat May 17 20:03:28 2014] GET /ru/ => generated 5482 bytes in 290 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12873|app: 0|req: 2/2] 95.91.204.108 () {46 vars in 846 bytes} [Sat May 17 20:03:42 2014] GET /ru/contacts/ => generated 3048 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 246 bytes (1 switches on core 0)
+[pid: 12873|app: 0|req: 3/3] 95.91.204.108 () {48 vars in 914 bytes} [Sat May 17 20:03:44 2014] GET /ru/portfolio/ => generated 1704 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12873|app: 0|req: 4/4] 95.91.204.108 () {50 vars in 945 bytes} [Sat May 17 20:04:16 2014] GET /ru/portfolio/ => generated 1704 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)

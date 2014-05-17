@@ -1,0 +1,71 @@
+
+{% extends "base.html" %}
+
+{% load filters %}
+
+{% block title %}Блог{% endblock %} 
+
+{% block content %}
+        <ul class="pagination">
+            {% if latest_post_list.has_previous %}
+                <li><a href="?page={{ latest_post_list.previous_page_number }}"><<</a></li>
+            {% endif %}
+
+
+           
+            {% for pg in latest_post_list.paginator.num_pages|create_range:1 %}
+                <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+            {% endfor %}
+
+
+
+            
+
+            {% if latest_post_list.has_next %}
+                <li><a href="?page={{ latest_post_list.next_page_number }}">>></a></li>
+            {% endif %}
+        </ul>
+
+   
+	
+    {% for post in latest_post_list %}
+        <h1 class="page-header">
+            <a href={% url 'detailblog' post.id %}>{{ post.name|safe }}</a>
+            <p><small>
+                {{ post.category }}
+                {{ post.ddate }}
+            </small></p>
+        </h1>
+        
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="thumbnail">
+                    <img src='{{post.image.url}}' alt="">
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    <ul class="pagination">
+            {% if latest_post_list.has_previous %}
+                <li><a href="?page={{ latest_post_list.previous_page_number }}"><<</a></li>
+            {% endif %}
+
+
+           
+            {% for pg in latest_post_list.paginator.num_pages|create_range:1 %}
+                <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+            {% endfor %}
+
+
+
+            
+
+            {% if latest_post_list.has_next %}
+                <li><a href="?page={{ latest_post_list.next_page_number }}">>></a></li>
+            {% endif %}
+        </ul>
+    
+{% endblock %}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>{% block title %}{% endblock %} / webvolant</title>
+
+        {% load bootstrap3 %}
+
+		{# Load CSS and JavaScript #}
+
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+
+		{% load staticfiles %}
+		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "template.css" %}">
+
+		{% load i18n %}
+        {% load localeurl_tags %} 
+
+    </head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-9">
+			<h1> webvolant </h1>
+		</div>
+		<div class="col-sm-3">
+			{% block contacts %} 
+				<p>телефон: 017636494787 <br/>
+				email: volant247@gmail.com</p>
+			{% endblock %}
+		</div>
+	</div>
+	<div class="row">
+		<nav class="topmenu navbar navbar-default" role="navigation">
+			<ul class="nav navbar-nav">
+				<li><a href="{% url 'blog.views.index' %}">u('Блог')</a></li>
+				<li><a href="{% url 'portfolio.views.index' %}">Портфолио</a></li>
+				<li><a href="{% url 'contactform.views.index' %}">Связаться</a></li>
+			</ul>
+
+{% for lang in LANGUAGES %}
+    {% ifequal lang.0 LANGUAGE_CODE %}
+        <li class="selected">{{ lang.1 }}</li>
+    {% else %}
+        <li><a href="{{ request.path|chlocale:lang.0 }}">{{ lang.1 }}</a></li>
+    {% endifequal %}
+{% endfor %}
+
+		</nav>
+	</div>
+</div>
+
+<div class="container">
+	{% bootstrap_messages %}
+
+    {% block content %}Empty page{% endblock %}
+</div> <!-- container -->
+
+</body>
+</html>

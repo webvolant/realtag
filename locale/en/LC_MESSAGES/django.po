@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-08 01:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contactform/models.py:8
+msgid "Имя"
+msgstr "Name"
+
+#: contactform/models.py:9
+msgid "Телефон или e-mail"
+msgstr "Phone or email"
+
+#: contactform/models.py:10
+msgid "Тема запроса"
+msgstr "Subject"
+
+#: contactform/models.py:11
+msgid "Сообщение"
+msgstr "Message"
+
+#: contactform/templates/contacts.html:9
+#: contactform/templates/contacts.html:24
+msgid "Контакты"
+msgstr "Contacts"
+
+#: contactform/templates/contacts.html:27
+msgid "Связаться с нами, и мы ответим не замедлительно!"
+msgstr "Contact us!"
+
+#: contactform/templates/contacts.html:39
+msgid "Отправить"
+msgstr "Send"
+
+#: templates/admin/base_site.html:4
+msgid "admin_panel"
+msgstr ""
+
+#: templates/admin/base_site.html:7
+msgid "WebVolant Django administration"
+msgstr ""
+
+#: templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: templates/admin/index.html:21
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: templates/admin/index.html:33
+msgid "Add"
+msgstr ""
+
+#: templates/admin/index.html:39
+msgid "Change"
+msgstr ""
+
+#: templates/admin/index.html:49
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: templates/admin/index.html:57
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/index.html:58
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/index.html:62
+msgid "None available"
+msgstr ""
+
+#: templates/admin/index.html:76
+msgid "Unknown content"
+msgstr ""
