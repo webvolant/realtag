@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load localeurl_tags %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+	{% trans "Контакты" %}
+{% endblock title %}
+
+{% block content %}
+<div class="information">
+	<p>
+		Skype: volant247</br>
+		ICQ: 175156523</br>
+		barkalov_anton@mail.ru
+	</p>
+</div>
+
+<div class="row">
+		<div class="col-sm-8">
+		<div class="contacts">
+			<h2>{% trans "Контакты" %}</h2>
+			<h3 class="page-header">
+
+				{% trans "Связаться с нами, и мы ответим не замедлительно!" %}
+			</h3>
+			
+			{% if all_is_right %}
+				<div class="alert alert-success">
+					{{ all_is_right }}
+				</div>
+			{% endif %}
+			<form method="post" action="">
+			{% csrf_token %} {% bootstrap_form form %} {% buttons %}
+				<button type="submit" class="btn btn-primary">
+					{% bootstrap_icon "star" %} 
+					{% trans "Отправить" %}
+
+				</button>
+			{% endbuttons %}
+			</form>
+		</div>	
+	</div>
+</div>
+{% endblock content %}
+
+

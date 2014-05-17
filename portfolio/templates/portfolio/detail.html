@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} {{ latest_post.name }} {% endblock %} 
+
+{% block content %}
+
+<h1 class="page-header">
+	{{ latest_post.name }}
+</h1>
+
+<img width="600px" src='{{latest_post.image.url}}' /> 
+{{ latest_post.desc|safe }}
+
+{% endblock %}

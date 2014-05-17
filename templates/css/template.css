@@ -1,0 +1,57 @@
+h1 p small {
+	font-size: 12px;
+	margin: 0 0 0px;
+}
+
+.wrap_portfolio
+{
+	width: 350px;
+	position: relative;
+
+
+}
+
+.wrap_portfolio h3 {display:none;}
+.wrap_portfolio:hover h3{
+text-align: center;
+display: table-cell;
+    vertical-align: middle;
+background: #121b2c;
+opacity: 0.85;
+position: absolute;
+color: white;
+font-size: 18px;
+width:97%;
+top:-4%;
+height:97%;
+
+}
+
+h3 span span{
+	position: relative;
+    top: 50%;
+}
+
+a.link_portfolio img{
+	filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%); 
+    /*-webkit-filter: sepia(20%);
+    /*-webkit-filter: contrast(85%);
+    /*-webkit-filter: blur(1px); */
+       
+    
+}
+
+a.link_portfolio:hover img{
+	filter: grayscale(50%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%); 
+    /*-webkit-filter: sepia(0%); 
+    -webkit-filter: blur(0px); */
+}
+

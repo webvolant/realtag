@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Блог{% endblock %} 
+
+{% block content %}
+	
+	{% if latest_post_list %}
+    
+    {% for post in latest_post_list %}
+            <div class="wrap_portfolio">
+                    <a class="link_portfolio thumbnail" href={% url 'detail' post.id %}><img  class="img-polaroid" src='{{post.imagelogo.url}}' />
+                    <h3><span><span>{{ post.name }}</span></span></h3>    
+                    </a>
+            </div>
+            {{ socket }}
+
+
+
+    {% endfor %}
+    
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}
+
+{% endblock %}
