@@ -1,0 +1,26 @@
+Sat May 17 22:30:05 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Sat May 17 22:30:05 2014] ***
+Sat May 17 22:30:05 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Sat May 17 22:30:05 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.57-3+deb7u1
+Sat May 17 22:30:05 2014 - nodename: sulfur
+Sat May 17 22:30:05 2014 - machine: x86_64
+Sat May 17 22:30:05 2014 - clock source: unix
+Sat May 17 22:30:05 2014 - detected number of CPU cores: 16
+Sat May 17 22:30:05 2014 - current working directory: /var/www/home/hosting_volant247/projects/realtag
+Sat May 17 22:30:05 2014 - writing pidfile to /var/run/uwsgi/realtag.volant247.pid
+Sat May 17 22:30:05 2014 - detected binary path: /usr/bin/uwsgi-core
+Sat May 17 22:30:05 2014 - your processes number limit is 274018
+Sat May 17 22:30:05 2014 - your memory page size is 4096 bytes
+Sat May 17 22:30:05 2014 - detected max file descriptor number: 1024
+Sat May 17 22:30:05 2014 - lock engine: pthread robust mutexes
+Sat May 17 22:30:05 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/realtag.volant247.sock fd 3
+Sat May 17 22:30:05 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Sat May 17 22:30:05 2014 - Set PythonHome to /home/hosting_volant247/projects/realtag/env
+Sat May 17 22:30:05 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Sat May 17 22:30:05 2014 - Python main interpreter initialized at 0x1887b10
+Sat May 17 22:30:05 2014 - your server socket listen backlog is limited to 100 connections
+Sat May 17 22:30:05 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Sat May 17 22:30:05 2014 - *** Operational MODE: single process ***
+Sat May 17 22:30:05 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1887b10 pid: 2655 (default app)
+Sat May 17 22:30:05 2014 - *** uWSGI is running in multiple interpreter mode ***
+Sat May 17 22:30:05 2014 - spawned uWSGI master process (pid: 2655)
+Sat May 17 22:30:05 2014 - spawned uWSGI worker 1 (pid: 2675, cores: 1)
