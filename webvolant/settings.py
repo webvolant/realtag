@@ -40,7 +40,7 @@ else:
     #MEDIA_URL = 'http://127.0.0.1:8000/static/'
 
     
-
+THUMBNAIL_DEBUG = True
 
 
 ALLOWED_HOSTS = []
@@ -49,7 +49,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'localeurl',
+    #'localeurl',
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,7 +66,8 @@ INSTALLED_APPS = (
     'contactform',
     'portfolio',
     #'ckeditor',
-    'modeltranslation',
+    #'modeltranslation',
+    'sorl.thumbnail',
 )
 
 
@@ -76,7 +78,7 @@ TEMPLATE_DIRS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'localeurl.middleware.LocaleURLMiddleware',
+    #'localeurl.middleware.LocaleURLMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -92,8 +94,8 @@ WSGI_APPLICATION = 'webvolant.wsgi.application'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
-    'django.core.context_processors.i18n',
     'django.contrib.auth.context_processors.auth',
+    #'django.core.context_processors.i18n',
 )
 
 # Database
@@ -126,10 +128,10 @@ else:
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
+LANGUAGE_CODE = 'ru-RU'
+USE_I18N = True
 
 TIME_ZONE = 'UTC'
-
-USE_I18N = True
 
 USE_L10N = True
 
@@ -145,6 +147,8 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 MEDIA_URL = '/media/'  # URL для медии в шаблонах
 
+#MEDIA_ROOT = '/home/code/webvolant/media/'
+#MEDIA_URL = 'http://127.0.0.1:8000/media/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')  # пустая папка, сюда будет собирать статику collectstatic
 
@@ -172,8 +176,8 @@ STATICFILES_FINDERS = (
 REDACTOR_OPTIONS = {'removeStyles': True}
 
 
-LANGUAGE_CODE = 'ru-RU'
 
+"""
 LANGUAGES = (
     ('ru', 'Russian'),
     ('de', 'Deutsch'),
@@ -190,3 +194,5 @@ USE_I18N = True
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'locale'),
 )
+
+"""

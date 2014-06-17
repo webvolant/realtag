@@ -1,25 +1,59 @@
 {% extends "base.html" %}
 
-{% block title %}Блог{% endblock %} 
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% block title %}Портфолио{% endblock %} 
+
+{% block title_content %}
+                <div class="col-xs-12">
+                    <h2 class="center3"><span>П</span>ортфолио</h2>
+                </div>
+{% endblock %}
 
 {% block content %}
-	
-	{% if latest_post_list %}
-    
-    {% for post in latest_post_list %}
-            <div class="wrap_portfolio">
-                    <a class="link_portfolio thumbnail" href={% url 'detail' post.id %}><img  class="img-polaroid" src='{{post.imagelogo.url}}' />
-                    <h3><span><span>{{ post.name }}</span></span></h3>    
-                    </a>
-            </div>
-            {{ socket }}
+
+    <ul class="portmodules">
+        {% for cat in category %}
+                <a href={% url 'portfolio.views.category' cat.id %}><button type="button" class="btn btn-primary">{{ cat.name}}</button></a>
+        {% endfor %}
+    </ul>
+
+   
+
+    <div class="content">
+    <!--<h3 class="slider_text">Portfolio</h3>-->
+    <div id="owl-demo" class="owl-carousel owl-theme">
+    	{% if latest_post_list %}
+            {% for post in latest_post_list %}
+
+                    <div class="item">
+                    <div class="viewport">
+                            <a href="{% url 'portfolio.views.detail' post.id %}">
+                                <span class="dark-background">{{ post.name }}<em></em></span>
+                                {% thumbnail post.imagelog "350x350" crop="top" as im %}
+                                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                                {% endthumbnail %}
+                            </a>
+                        </div>
+                    </div>
+
+                  
+
+                    
+
+
+            {% endfor %}
+        {% else %}
+            <p>No posts are available.</p>
+        {% endif %}
+
+    </div>
+    </div>
 
 
 
-    {% endfor %}
-    
-{% else %}
-    <p>No posts are available.</p>
-{% endif %}
+
+
 
 {% endblock %}

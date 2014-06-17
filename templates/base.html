@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>{% block title %}{% endblock %} / webvolant</title>
+        <title>{% block title %}homepage{% endblock %} / web-сайт Баркалова Антона</title>
 
+        <meta content='{% block keywords %}{% endblock %}' name='keywords'/>
+        {% load filters %}
         {% load bootstrap3 %}
 
 		{# Load CSS and JavaScript #}
@@ -13,52 +15,463 @@
 		{% bootstrap_javascript %}
 
 		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static "bootstrap.css" %}">
 		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "template.css" %}">
+		
+		<!--<link rel="stylesheet" type="text/css" href="{% static "owl.carousel.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "owl.theme.css" %}">-->
+		<link rel="stylesheet" type="text/css" href="{% static "portfolio.css" %}">
 
-		{% load i18n %}
-        {% load localeurl_tags %} 
+
+		
+
+
+
+<style type="text/css">
+/* Account for fixed navbar */
+	body {
+	  padding-top: 0px;
+	  padding-bottom: 0px;
+	}
+
+	/* Finesse the page header spacing */
+	.page-header {
+	  margin-bottom: 30px;
+	}
+	.page-header .lead {
+	  margin-bottom: 10px;
+	}
+
+
+	/* Non-responsive overrides
+	 *
+	 * Utilitze the following CSS to disable the responsive-ness of the container,
+	 * grid system, and navbar.
+	 */
+
+	/* Reset the container */
+	.container {
+	  width: 900px;
+	  max-width: none !important;
+
+	}
+
+	/* Demonstrate the grids */
+	.col-xs-4 {
+	  padding-top: 15px;
+	  padding-bottom: 15px;
+	  background-color: ;
+	  
+	  border: ;
+	  
+	}
+
+	.container .navbar-header,
+	.container .navbar-collapse {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+
+	/* Always float the navbar header */
+	.navbar-header {
+	  float: left;
+	}
+
+	/* Undo the collapsing navbar */
+	.navbar-collapse {
+	  display: block !important;
+	  height: auto !important;
+	  padding-bottom: 0;
+	  overflow: visible !important;
+	}
+
+	.navbar-toggle {
+	  display: none;
+	}
+	.navbar-collapse {
+	  border-top: 0;
+	}
+
+	.navbar-brand {
+	  margin-left: -15px;
+	}
+
+	/* Always apply the floated nav */
+	.navbar-nav {
+	  float: left;
+	  margin: 0;
+	}
+	.navbar-nav > li {
+	  float: left;
+	}
+	.navbar-nav > li > a {
+	  padding: 15px;
+	}
+
+	/* Redeclare since we override the float above */
+	.navbar-nav.navbar-right {
+	  float: right;
+	}
+
+	/* Undo custom dropdowns */
+	.navbar .navbar-nav .open .dropdown-menu {
+	  position: absolute;
+	  float: left;
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border: 1px solid rgba(0, 0, 0, .15);
+	  border-width: 0 1px 1px;
+	  border-radius: 0 0 4px 4px;
+	  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	  color: #333;
+	}
+	.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+	  color: #fff !important;
+	  background-color: #428bca !important;
+	}
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+	  color: #999 !important;
+	  background-color: transparent !important;
+	}
+
+</style>
+
+ 
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+	
+	<script src="{% static "bootstrap.js" %}"></script>
+	<!--<script type="text/javascript" src="{% static "owl.carousel-min.js" %}"></script>-->
+
+	<script type="text/javascript">
+	       $(document).ready(function() {
+
+	       	$('.carousel').carousel({
+			  interval: 2000
+			});
+
+	       	// СТарый добрый toggle
+	       	$.fn.oldtoggle = function () {
+			    var b = arguments;
+			    return this.each(function (i, el) {
+			        a = function () {
+			            var c = 0;
+			            return function () {
+			                b[c++ % b.length].apply(el, arguments)
+			            }
+			        }();
+			        $(el).click(a)
+			    })
+			};
+			function func1() {
+			var $next = $(this).next('.table')
+			$('.table:visible').not($next).prev().click();
+			$next.slideDown(500)};
+			function func2() {$(this).next('.table').slideUp(500)};
+			$('h3').oldtoggle(func1, func2);
+
+				
+				
+				$('.arrow_top').mouseenter(
+					function() {
+					$('.vmenu').animate({
+		                    
+		                    "border-width": "1px",	
+							"border-style": "solid",
+							"border-color": "#D5D5D5",
+		                }, 250);
+				}).mouseleave(
+					function() {
+						$('.vmenu').animate({
+		                    "border-width": "1px",
+		                    "border-style": "solid",
+		                    "border-color": "rgb(241, 234, 234)",
+		                }, 250);
+				});
+
+				//Для стрелки выдвижения меню
+	       		$('.gbutton').oldtoggle(
+		            function(){
+		                $('.gmenu').animate({
+		                    opacity: 0.8,
+		                    color:"#fff",
+		                    top:"-100px",
+								
+							"border-width": "1px",	
+							"border-style": "solid",
+							"border-color": "#fff",
+
+		                }, 1000);
+		                $('.gbutton').animate({
+		                	display: 'block',
+		                    opacity: 1,
+		                    color:"#fff",
+		                    top:"0px",
+		                }, 1000);
+		                $('.header').animate({
+		                	display: 'block',
+		                    top:"-100px",
+		                }, 1000);
+		                $('.more').fadeIn(1000);
+		                /*$('.arrow_top').css('background-position', '-65px 10px');*/
+		            },
+		            function(){
+		                $('.gmenu').animate({
+		                	display: 'block',
+		                    opacity: 1,
+		                    color:"#fff",
+		                    top:"0px",
+		                    "border-width": "1px",
+		                    "border-style": "solid",
+		                    "border-color": "rgb(241, 234, 234)",
+		                }, 1000);
+		                $('.gbutton').animate({
+		                	display: 'block',
+		                    opacity: 1,
+		                    color:"#fff",
+		                    top:"0px",
+
+		                }, 1000);
+		                $('.header').animate({
+		                	display: 'block',
+		                    top:"0px",
+		                }, 1000);
+
+		                $('.more').fadeOut(1000);
+		                
+		                /*$('.arrow_top').css('background-position', '-15px 10px');*/
+		                
+		            }
+		            
+		            
+		        );
+
+			//Для пункта меню 
+			$('.punkt').mouseenter(
+					function() {
+					$(this).animate({
+		                    opacity: 0.9,
+		                    color:"#fff",
+		                    backgroundColor: "#834689",
+		                }, 250);
+				}).mouseleave(
+					function() {
+						$(this).animate({
+		                    opacity: 1,
+		                    color:"#000",
+		                    backgroundColor: "inherit",
+		                }, 250);
+				});
+					
+					// обработка наложения инфо на картинку материала
+		       		$("div.image").mouseenter(function () {
+						var postid;
+	    				postid = $(this).attr("idd");
+		     				$.get('/gworks/info/', {post_id: postid}, function(data){
+		               		$('.info').html(data);
+	           			});
+
+
+		     			$('.info').css({
+					        
+					        top: $(this).offset().top,
+					        left: $(this).offset().left,
+					        width: $(this).width(),
+					        height: $(this).height(),
+					        //transition: '2s',
+					        
+					    });
+
+					    $(".info").animate({
+					    	display: 'block',
+					        //width: "100%",
+					        opacity: 0.9,
+					        color:"#fff",
+					      }, 250 );
+					    //$(.info).addClass("info2");
+					    //$(".info").fadeIn(100);
+		       		})
+		       		$("div.info").mouseleave(function(){
+						$(".info").css({
+					        display: "block",
+					        opacity: 1,
+					        color:"#834689",
+					        
+					        }
+					        
+    	
+					        );
+
+						var postid;
+	    				postid = $(this).attr("idd");
+		     				$.get('/gworks/infoback/', {post_id: postid}, function(data){
+		               		$(this).html(data);
+	           			});
+					
+		       });
+
+
+            //$("#owl-demo").owlCarousel({
+            //    navigation : false
+            //});
+ 
+
+
+
+   		
+		});
+	</script>
 
     </head>
 <body>
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-9">
-			<h1> webvolant </h1>
+
+	
+	<div class="header">
+	<div class="container middle">
+		<div class="row">
+			<div class="col-xs-12"> 
+				
+
+				<div class="row gmenu">
+
+					<div class="col-xs-3 prod">
+						<a href="/">WEB-САЙТ</br>
+						Баркалова Антона</a>
+					</div>
+
+					<div class="col-xs-3 prod2">
+						Разработка и продвижение</br>
+						сайтов в сети
+					</div>
+					<div class="col-xs-6 menu">
+						<ul class="nav nav-pills">
+						  <!--<li class="dropdown">
+						    <a class="dropdown-toggle"
+						       data-toggle="dropdown"
+						       href="#">
+						        Dropdown
+						        <b class="caret"></b>
+						      </a>
+						    <ul class="dropdown-menu">
+						      
+						    </ul>
+						  </li>-->
+						  <li><a href="/">Главная</a></li>
+						  <li><a href="{% url 'portfolio.views.index' %}">Мои работы</a></li>
+						  <li><a href="/">Услуги</a></li>
+						  <li><a href="{% url 'contactform.views.index' %}">Контакты</a></li>
+						  <li><a href="{% url 'blog.views.index' %}">Блог</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			
+			<div class="col-xs-12"> 
+				<div class="row gbut">
+					<div class="gbutton">
+						Нажать!
+					</div>
+				</div>
+			</div>
+
+			{% block header %} {% block title_content %} {% endblock %} {% endblock %}
+			
+			
 		</div>
-		<div class="col-sm-3">
-			{% block contacts %} 
-				<p>телефон: 017636494787 <br/>
-				email: volant247@gmail.com</p>
-			{% endblock %}
+			<div class="container">
+				<div class="row">
+					<div class="more"><h1>И у Вас на сайте будут такие элементы!</h1></div>
+				</div>
+			</div>
+    </div>
+
+
+</div>
+
+	{% block home %}{% endblock %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					{% bootstrap_messages %}
+
+				    {% block content %}{% endblock %}
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<nav class="topmenu navbar navbar-default" role="navigation">
-			<ul class="nav navbar-nav">
-				<li><a href="{% url 'blog.views.index' %}">u('Блог')</a></li>
-				<li><a href="{% url 'portfolio.views.index' %}">Портфолио</a></li>
-				<li><a href="{% url 'contactform.views.index' %}">Связаться</a></li>
-			</ul>
 
-{% for lang in LANGUAGES %}
-    {% ifequal lang.0 LANGUAGE_CODE %}
-        <li class="selected">{{ lang.1 }}</li>
-    {% else %}
-        <li><a href="{{ request.path|chlocale:lang.0 }}">{{ lang.1 }}</a></li>
-    {% endifequal %}
-{% endfor %}
+<div class="footer">
+	<div class="container middle">
+		<div class="row">
+			<div class="col-xs-12"> 
+				<div class="row gmenubottom">
 
-		</nav>
+					<div class="col-xs-3 prod">
+						<a href="/">WEB-САЙТ</br>
+						Баркалова Антона</a>
+					</div>
+
+					<div class="col-xs-3 prod2">
+						Разработка и продвижение</br>
+						сайтов в сети
+					</div>
+					<div class="col-xs-6 menu">
+						<ul class="nav nav-pills">
+						  <!--<li class="dropdown">
+						    <a class="dropdown-toggle"
+						       data-toggle="dropdown"
+						       href="#">
+						        Dropdown
+						        <b class="caret"></b>
+						      </a>
+						    <ul class="dropdown-menu">
+						      
+						    </ul>
+						  </li>-->
+						  <li><a href="/">Главная</a></li>
+						  <li><a href="{% url 'portfolio.views.index' %}">Мои работы</a></li>
+						  <li><a href="/">Услуги</a></li>
+						  <li><a href="{% url 'contactform.views.index' %}">Контакты</a></li>
+						  <li><a href="{% url 'blog.views.index' %}">Блог</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="container">
-	{% bootstrap_messages %}
-
-    {% block content %}Empty page{% endblock %}
-</div> <!-- container -->
-
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.viewport').mouseenter(function(e) {
+            $(this).children('a').children('img').animate({ height: '360', left: '-10', top: '-10', width: '360'}, 150);
+            $(this).children('a').children('span').fadeIn(300);
+        }).mouseleave(function(e) {
+                $(this).children('a').children('img').animate({ height: '350', left: '0', top: '0', width: '350'}, 150);
+                $(this).children('a').children('span').fadeOut(300);
+            });
+    });
+</script>

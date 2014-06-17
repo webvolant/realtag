@@ -6,7 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 
-#from django.views.generic import TemplateView
+from django.views.generic import TemplateView
 
 
 
@@ -16,10 +16,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    #url(r'^$', TemplateView.as_view(template_name='index.html'), name='index' ),
+    url(r'^$', TemplateView.as_view(template_name='home.html'), name='index' ),
     #url(r'^localeurl/', include('localeurl.urls')),
-    url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^$', include('blog.urls')),
+    #url(r'^i18n/', include('django.conf.urls.i18n')),
+    #url(r'^$', "#"),
     # url(r'^blog/', include('blog.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^portfolio/', include('portfolio.urls')),

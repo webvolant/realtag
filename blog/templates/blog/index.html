@@ -1,49 +1,36 @@
 
 {% extends "base.html" %}
 
+
+
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% load thumbnail %}
 {% load filters %}
 
 {% block title %}Блог{% endblock %} 
 
+{% block title_content %}
+                <div class="col-xs-12">
+                    <h2 class="center3"><span>Б</span>лог</h2>
+                </div>
+{% endblock %}
+
 {% block content %}
-        <ul class="pagination">
-            {% if latest_post_list.has_previous %}
-                <li><a href="?page={{ latest_post_list.previous_page_number }}"><<</a></li>
-            {% endif %}
-
-
-           
-            {% for pg in latest_post_list.paginator.num_pages|create_range:1 %}
-                <li><a href="?page={{ pg }}">{{ pg }}</a></li>
-            {% endfor %}
-
-
-
-            
-
-            {% if latest_post_list.has_next %}
-                <li><a href="?page={{ latest_post_list.next_page_number }}">>></a></li>
-            {% endif %}
-        </ul>
-
+        
+<div class="col-xs-9">
    
-	
     {% for post in latest_post_list %}
-        <h1 class="page-header">
-            <a href={% url 'detailblog' post.id %}>{{ post.name|safe }}</a>
-            <p><small>
+        <h3 class="page-header">
+            <a href={% url 'blog.views.detail' post.id %}>{{ post.name|safe }}</a>
+            <p class="information"><small>
                 {{ post.category }}
                 {{ post.ddate }}
             </small></p>
-        </h1>
+        </h3>
         
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="thumbnail">
-                    <img src='{{post.image.url}}' alt="">
-                </div>
-            </div>
-        </div>
+
 
     {% endfor %}
 
@@ -52,20 +39,62 @@
                 <li><a href="?page={{ latest_post_list.previous_page_number }}"><<</a></li>
             {% endif %}
 
-
            
             {% for pg in latest_post_list.paginator.num_pages|create_range:1 %}
                 <li><a href="?page={{ pg }}">{{ pg }}</a></li>
             {% endfor %}
 
 
-
-            
-
             {% if latest_post_list.has_next %}
                 <li><a href="?page={{ latest_post_list.next_page_number }}">>></a></li>
             {% endif %}
         </ul>
     
+</div>
+<div class="col-xs-3">
+    <h4><span class="gblue">K</span>атегории</h4>
+    <ul class="modules">
+        {% for obj in objwcat %}
+                <li><a href={% url 'blog.views.category' obj.wid %}>{{ obj.wname }}
+        </a><span class="badge">{{ obj.wcount }}</span></li>
+        {% endfor %}
+    </ul>
+    
+    <h4><span class="gblue">П</span>оследние заметки</h4>
+    <ul class="modules">
+        {% for pl in post_list_limit %}
+                <li><a href={% url 'blog.views.detail' pl.id %}>{{ pl.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% endblock %}
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('.addFolder input').keydown(function(e) {
+    if (e.keyCode == 13) {
+        name = $(this).val();
+        //$.get('/blog/catcount/', {name: name}, function(data){
+          //type: "GET",
+          //url: "/blog/catcount/",
+          //data: name,
+            //success: function(data) {
+              //$('.folders ul li:first-child').after('<li class="bg-color-2 ui-droppable" data-folderid="2">'+name+' <span>0</span></li>');
+              //$('.addFolder input').val('');
+              $('.itt').html(data);
+
+        });
+
+    }
+  });
+ });
+</script>
+
+
+
+
 

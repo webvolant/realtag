@@ -1,30 +1,68 @@
 {% extends "base.html" %}
 
-{% load i18n %}
-{% load localeurl_tags %}
+{% load filters %}
 
+{% load staticfiles %}
 {% load bootstrap3 %}
 
 {% block title %}
-	{% trans "Контакты" %}
+	Контакты
 {% endblock title %}
 
+{% block title_content %}
+                <div class="col-xs-12">
+                    <h2 class="center3"><span>К</span>онтактная информация</h2>
+                </div>
+{% endblock %}
+
+
 {% block content %}
-<div class="information">
-	<p>
-		Skype: volant247</br>
-		ICQ: 175156523</br>
-		barkalov_anton@mail.ru
-	</p>
+
+<div class="ContactInfo">
+	<div class="container middle">
+			<div class="row">
+				<div class="col-xs-12">
+					<!--<h2 class="center"><span>К</span>онтактная информация</h2>-->
+				</div>
+				<div class="col-xs-12 contacts">
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact1.png" %}" /></div>
+						<div class="text">
+						<h5>Web - Разработчик</h5>		
+						Баркалов Антон</div>	
+					</div>
+
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact2.png" %}" /></div>
+						<div class="text">
+						<h5>Skype</h5>
+						volant247</div>	
+					</div>
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact3.png" %}" /></div>
+						<div class="text">
+						<h5>E-mail</h5>
+						volant247@gmail.com</div>	
+					</div>
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact4.png" %}" /></div>
+						<div class="text">
+						<h5>Телефон</h5>
+						+49 176 36494787</div>	
+					</div>
+				</div>
+			</div>
+	</div>
 </div>
 
 <div class="row">
 		<div class="col-sm-8">
 		<div class="contacts">
-			<h2>{% trans "Контакты" %}</h2>
+			<!--<h2>{ % trans "Контакты" % }</h2>-->
 			<h3 class="page-header">
 
-				{% trans "Связаться с нами, и мы ответим не замедлительно!" %}
+				<!--{ % trans "Свяжитесь со мной через форму, быстро и удобно!"  }-->
+				Свяжитесь со мной через форму, быстро и удобно!
 			</h3>
 			
 			{% if all_is_right %}
@@ -36,8 +74,8 @@
 			{% csrf_token %} {% bootstrap_form form %} {% buttons %}
 				<button type="submit" class="btn btn-primary">
 					{% bootstrap_icon "star" %} 
-					{% trans "Отправить" %}
-
+					<!--{ % trans "Отправить" % }-->
+                    Отправить
 				</button>
 			{% endbuttons %}
 			</form>

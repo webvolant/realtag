@@ -1,13 +1,51 @@
 {% extends "base.html" %}
 
-{% block title %} {{ latest_post.name }} {% endblock %} 
+{% block title %} {{ latest_post.name }} {% endblock %}
 
+{% block keywords %} {{ latest_post.keywords }} {% endblock %}
+
+{% load thumbnail %}
 
 {% block content %}
 
-<h1 class="page-header">
-	{{ latest_post.name }}
-</h1>
-{{ latest_post.content|safe }}
+<div class="col-xs-9">
+	<h1 class="page-header">
+		{{ latest_post.name }}
+	</h1>
+				<div class="blog_image">
+					{% thumbnail latest_post.image "250x250" crop="center" as im %}
+	                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+	   				{% endthumbnail %}
+	   			</div>
+	{{ latest_post.content|safe }}
+
+    <div class="tags"><h4>
+		<span class="gblue">Т</span>еги
+	</h4>
+    <ul class="inline">
+        {% for tag in tags %}
+                <li><a href={% url 'blog.views.detail' tag.id %}><button type="button" class="btn btn-info">{{ tag.name}}</button></a></li>
+        {% endfor %}
+
+    </ul>
+    </div>
+
+</div>
+<div class="col-xs-3">
+    <h4><span class="gblue">К</span>атегории</h4>
+    <ul class="modules">
+        {% for obj in objwcat %}
+                <li><a href={% url 'blog.views.category' obj.wid %}>{{ obj.wname }}
+        </a><span class="badge">{{ obj.wcount }}</span></li>
+        {% endfor %}
+    </ul>
+
+    <h4><span class="gblue">П</span>оследние заметки</h4>
+    <ul class="modules">
+        {% for pl in post_list_limit %}
+                <li><a href={% url 'blog.views.detail' pl.id %}>{{ pl.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% endblock %}
