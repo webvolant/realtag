@@ -168,7 +168,7 @@ body{
 
 .jobs{
     margin-top: 20px;
-    height: 260px;
+    
     background-color:#cce8fb;
     width:100%;
     min-width: 980px;
@@ -256,6 +256,18 @@ body{
 }
 
 .nav-pills > li > a:hover {
+    box-shadow: 0px 0px 8px -2px #000000;
+    background: #40a004;
+    color:#000;
+}
+
+.footer .nav-pills > li > a {
+    border-radius: 0px;
+    padding: 15px 10px;
+    color:#fff;
+}
+
+.footer .nav-pills > li > a:hover {
     box-shadow: 0px 0px 8px -2px #000000;
     background: #40a004;
     color:#000;
@@ -601,3 +613,25 @@ margin: 0 auto;
 }
 
 
+
+.leistungen .col-xs-2{
+    
+    
+    width:420px;
+    padding:20px;
+    font-size: 12px;
+    font-family:"Helvetica";
+    border-bottom:1px solid #F4F4F4;
+}
+
+.leistungen p{
+    text-align: left;
+}
+
+.leistungen img{
+    padding:6px;
+}
+
+.leistungen .col-xs-2 strong{
+    font-size: 14px;
+}

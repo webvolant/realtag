@@ -63,13 +63,26 @@ INSTALLED_APPS = (
     #'django-wysiwyg'
     'bootstrap3',
     'south',
-    'contactform',
+    #'contactform',
     'portfolio',
     #'ckeditor',
     #'modeltranslation',
     'sorl.thumbnail',
+    'pages',
+    'ckeditor',
+    'orderform',
+    'captcha',
 )
 
+############################### VARIABLES
+STATUS_SHOW = 1
+STATUS_HIDE = 0
+
+
+ARTICLES_COUNT = 3
+ARTICLES_COUNT_PAGE = 2
+
+###############################
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'), 
@@ -156,7 +169,7 @@ STATIC_URL = '/static/'  # URL для шаблонов
 
 
 STATICFILES_DIRS = (
-
+    os.path.join(BASE_DIR, 'blog/templates/blog_static'),
     os.path.join(BASE_DIR, 'templates/css'),
 )
 
@@ -177,22 +190,27 @@ REDACTOR_OPTIONS = {'removeStyles': True}
 
 
 
-"""
+#
 LANGUAGES = (
+    #('de', 'Deutsch'),
     ('ru', 'Russian'),
-    ('de', 'Deutsch'),
-    ('en', 'English'),
+
+#    ('en', 'English'),
 )
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 MODELTRANSLATION_TRANSLATION_REGISTRY = 'webvolant.translation'
 
-# включаем систему перевода django
-USE_I18N = True
 
-# указываем, где лежат файлы перевода
-LOCALE_PATHS = (
-    os.path.join(PROJECT_ROOT, 'locale'),
-)
 
-"""
+
+CKEDITOR_UPLOAD_PATH = "media/"
+
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'volant247@googlemail.com'
+EMAIL_HOST_PASSWORD = '9c471de3'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'volant247@googlemail.com'

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} {{ detail.title }} {% endblock %} 
+{% block keywords %} {{ detail.keywords }} {% endblock %} 
+
+
+
+{% block content %}
+
+<h1 class="page-header">
+	{{ detail.title }}
+</h1>
+{{ detail.content|safe }}
+
+{% endblock %}

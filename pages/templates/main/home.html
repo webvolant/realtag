@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+            {% block header %}
+
+
+            {% endblock header %}
+
+{% block content %}
+
+    {{ detail.content|safe }}
+
+{% endblock content %}
+
+{% block partners %}
+
+ <div class="partners">
+	<div class="container middle">
+		<div class="row">
+            <h3 class="titles">{% trans "Partners" %}</h3>
+            <a href="/"><img src="{% static "partners/8.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/2.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/3.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/4.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/5.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/6.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/7.png" %}" title="partner" alt="zweifach" class="" /></a>
+            <a href="/"><img src="{% static "partners/1.png" %}" title="partner" alt="zweifach" class="" /></a>
+        </div>
+    </div>
+</div>
+
+{% endblock partners %}
+
+
+

@@ -24,6 +24,9 @@
 		<link rel="stylesheet" type="text/css" href="{% static "portfolio.css" %}">
 
 
+
+
+
 		
 
 
@@ -336,6 +339,8 @@
 		});
 	</script>
 
+		
+	{% block head %}  {% endblock %}
     </head>
 <body>
 
@@ -350,8 +355,8 @@
 				<div class="row gmenu">
 
 					<div class="col-xs-3 prod">
-						<a href="/">WEB-САЙТ</br>
-						Баркалова Антона</a>
+						<a href="/">ФРИЛАНСЕР</br>
+						Баркалов Антон</a>
 					</div>
 
 					<div class="col-xs-3 prod2">
@@ -373,8 +378,8 @@
 						  </li>-->
 						  <li><a href="/">Главная</a></li>
 						  <li><a href="{% url 'portfolio.views.index' %}">Мои работы</a></li>
-						  <li><a href="/">Услуги</a></li>
-						  <li><a href="{% url 'contactform.views.index' %}">Контакты</a></li>
+						  <li><a href="{% url 'pages.views.site' 'leistungen' %}">Услуги</a></li>
+						  <li><a href="{% url 'orderform.views.order' %}">Контакты</a></li>
 						  <li><a href="{% url 'blog.views.index' %}">Блог</a></li>
 						</ul>
 					</div>
@@ -397,7 +402,7 @@
 		</div>
 			<div class="container">
 				<div class="row">
-					<div class="more"><h1>И у Вас на сайте будут такие элементы!</h1></div>
+					<div class="more"><h1>Извините, модуль на реконструкции.</h1></div>
 				</div>
 			</div>
     </div>
@@ -424,33 +429,21 @@
 		<div class="row">
 			<div class="col-xs-12"> 
 				<div class="row gmenubottom">
-
 					<div class="col-xs-3 prod">
-						<a href="/">WEB-САЙТ</br>
-						Баркалова Антона</a>
+						<a href="/">ФРИЛАНСЕР</br>
+						Баркалов Антон</a>
 					</div>
-
+<!--
 					<div class="col-xs-3 prod2">
 						Разработка и продвижение</br>
 						сайтов в сети
-					</div>
+					</div>-->
 					<div class="col-xs-6 menu">
 						<ul class="nav nav-pills">
-						  <!--<li class="dropdown">
-						    <a class="dropdown-toggle"
-						       data-toggle="dropdown"
-						       href="#">
-						        Dropdown
-						        <b class="caret"></b>
-						      </a>
-						    <ul class="dropdown-menu">
-						      
-						    </ul>
-						  </li>-->
 						  <li><a href="/">Главная</a></li>
 						  <li><a href="{% url 'portfolio.views.index' %}">Мои работы</a></li>
-						  <li><a href="/">Услуги</a></li>
-						  <li><a href="{% url 'contactform.views.index' %}">Контакты</a></li>
+						  <li><a href="{% url 'pages.views.site' 'leistungen' %}">Услуги</a></li>
+						  <li><a href="{% url 'orderform.views.order' %}">Контакты</a></li>
 						  <li><a href="{% url 'blog.views.index' %}">Блог</a></li>
 						</ul>
 					</div>

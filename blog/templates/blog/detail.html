@@ -1,4 +1,16 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block head %}
+<link rel="stylesheet" href="{% static "monokai_sublime.css" %}">
+        <script type="text/javascript" src="{% static "highlight.pack.js" %}"></script>
+        <script type="text/javascript">
+          hljs.initHighlightingOnLoad('xml', 'css', 'python', 'django', 'javascript');
+        </script>
+
+        
+
+<script>hljs.initHighlightingOnLoad();</script>
+{% endblock %} 
 
 {% block title %} {{ latest_post.name }} {% endblock %}
 

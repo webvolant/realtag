@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+{% load bootstrap3 %}
+
+
+
+{% block mapblock %}
+    <!-- Default map with 300x400 dimensions -->
+        
+{% endblock %}
+
+{% block title %}
+	Контакты
+{% endblock title %}
+
+{% block title_content %}
+                <div class="col-xs-12">
+                    <h2 class="center3"><span>К</span>онтактная информация</h2>
+                </div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="ContactInfo">
+	<div class="container middle">
+			<div class="row">
+				
+				<div class="col-xs-12 contacts">
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact1.png" %}" /></div>
+						<div class="text">
+						<h5>Web - Разработчик</h5>		
+						Баркалов Антон</div>	
+					</div>
+
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact2.png" %}" /></div>
+						<div class="text">
+						<h5>Skype</h5>
+						volant247</div>	
+					</div>
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact3.png" %}" /></div>
+						<div class="text">
+						<h5>E-mail</h5>
+						volant247@gmail.com</div>	
+					</div>
+					<div class="col-xs-3">
+						<div class="cimg"><img src="{% static "images/contact4.png" %}" /></div>
+						<div class="text">
+						<h5>Телефон</h5>
+						+49 176 36494787</div>	
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+<div class="row">
+		<div class="col-sm-8">
+
+
+
+		<div class="contacts">
+			<h3 class="page-header">
+				Связаться, заполнив данную форму.
+			</h3>
+			{% if message %}
+				<div class="alert alert-success">
+					{{ message }}
+				</div>	
+			{% endif %}
+			
+			<form method="post" action="" enctype="multipart/form-data">
+			{% csrf_token %} {% bootstrap_form form %} {% buttons %}
+				<button type="submit" class="btn btn-primary">
+					{% bootstrap_icon "star" %} Отправить
+
+				</button>
+			{% endbuttons %}
+			</form>
+		</div>	
+	</div>
+</div>
+
+
+
+{% endblock content %}

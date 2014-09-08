@@ -1,15 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-import os
 
+#import os
 from models import Post
 from models import Category
 from models import Tag
 
-import pprint
+from django.conf import settings #import variables from settings
+
+
+from django.contrib import auth
 
 class WCategory(object):
     wid = 0
@@ -24,7 +28,7 @@ class WCategory(object):
         self.key = item
 
 def getCat():
-    category = Category.objects.filter(status=1)
+    category = Category.objects.filter(status=settings.STATUS_SHOW)
     kolcat = len(category)
 
     #wlist = [ WCategory(i,0,"x") for i in range(10)]
@@ -57,11 +61,11 @@ def getPaginate(request,list,var):
     return list_of_objects
 
 def index(request):
-    post_list_limit = Post.objects.filter(status=1).order_by('-ddate')[:6] # for module
+    post_list_limit = Post.objects.filter(category__status=settings.STATUS_SHOW,status=settings.STATUS_SHOW).order_by('-ddate')[:settings.ARTICLES_COUNT] # for module
     my_objects = getCat() #for module category with count
 
-    post_list = Post.objects.filter(status=1).order_by('-ddate')
-    list_of_objects = getPaginate(request,post_list,8)
+    post_list = Post.objects.filter(category__status=settings.STATUS_SHOW,status=settings.STATUS_SHOW).order_by('-ddate')
+    list_of_objects = getPaginate(request,post_list,settings.ARTICLES_COUNT_PAGE)
 
     template = loader.get_template('blog/index.html')
     context = RequestContext(request, {
@@ -72,11 +76,11 @@ def index(request):
     return HttpResponse(template.render(context))
 
 def category(request, catid):
-    post_list_limit = Post.objects.filter(status=1).order_by('-ddate')[:6] # for module
+    post_list_limit = Post.objects.filter(category__status=settings.STATUS_SHOW,status=settings.STATUS_SHOW).order_by('-ddate')[:settings.ARTICLES_COUNT] # for module
     my_objects = getCat() #for module category with count
 
-    post_list = Post.objects.filter(category = catid).order_by('-ddate') #? status &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-    list_of_objects = getPaginate(request,post_list,8)
+    post_list = Post.objects.filter(category = catid,category__status=settings.STATUS_SHOW,status=settings.STATUS_SHOW).order_by('-ddate') #? status &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    list_of_objects = getPaginate(request,post_list,settings.ARTICLES_COUNT_PAGE)
 
     template = loader.get_template('blog/index.html')
     context = RequestContext(request, {
@@ -86,22 +90,25 @@ def category(request, catid):
     })
     return HttpResponse(template.render(context))
 
-def detail(request, post_id):
-    post_list_limit = Post.objects.filter(status=1).order_by('-ddate')[:6] # for module
-    my_objects = getCat() #for module category with count
+def detail(request, post_id): #detail ,in article
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/access/')
+    else:
+        post_list_limit = Post.objects.filter(category__status=settings.STATUS_SHOW,status=settings.STATUS_SHOW).order_by('-ddate')[:settings.ARTICLES_COUNT] # for module
+        my_objects = getCat() #for module category with count
 
-    post = Post.objects.get(id = post_id)
+        post = Post.objects.get(id = post_id,status=settings.STATUS_SHOW)
 
-    tags = Tag.objects.filter(post = post_id)
+        tags = Tag.objects.filter(post = post_id)
 
-    template = loader.get_template('blog/detail.html')
-    context = RequestContext(request, {
-        'latest_post': post,
-        'post_list_limit': post_list_limit,
-        'objwcat':my_objects,
-        'tags':tags,
-    })
-    return HttpResponse(template.render(context))
+        template = loader.get_template('blog/detail.html')
+        context = RequestContext(request, {
+            'latest_post': post,
+            'post_list_limit': post_list_limit,
+            'objwcat':my_objects,
+            'tags':tags,
+        })
+        return HttpResponse(template.render(context))
 
 
   

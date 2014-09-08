@@ -19,7 +19,7 @@
 						<div class="rein">
 								<h2 class="nsite">Вам нужен сайт?</h2>
 								<h4 class="nslog">Закажите прямо сейчас</h4>
-								<a href="{% url 'contactform.views.index' %}"><button type="button" class="btn btn-danger  btn-lg">Заказать</button></a>
+								<a href="{% url 'orderform.views.order' %}"><button type="button" class="btn btn-danger  btn-lg">Заказать</button></a>
 						</div>
 					</div>
 					<div class="col-xs-3"></div>
@@ -59,20 +59,20 @@
 			<div class="col-xs-4">
 				<img src="{% static "images/service1.png" %}" />
 				<div class="text">
-				<h5>Создание сайтов</h5>		
+				<h5><a href="{% url 'pages.views.site' 'leistungen' %}">Создание сайтов</a></h5>		
 				Я знаю как разработать ваш сайт чтобы он был успешным. Ведь это моя основная специализация. Вы получите свой продукт своевременно.</div>	
 			</div>
 
 			<div class="col-xs-4">
 				<img src="{% static "images/service2.png" %}" />
 				<div class="text">
-				<h5>Фирменный стиль</h5>
+				<h5><a href="{% url 'pages.views.site' 'leistungen' %}">Фирменный стиль</a></h5>
 				Фирменый стиль очень важный этап при создании сайта. Это ваша индивидуальность, это один из способов выделится из всей конкурентной массы.</div>	
 			</div>
 			<div class="col-xs-4">
 				<img src="{% static "images/service3.png" %}" />
 				<div class="text">
-				<h5>Продвижение сайтов</h5>
+				<h5><a href="{% url 'pages.views.site' 'leistungen' %}">Продвижение сайтов</a></h5>
 				Услуга обеспечит продвижение вашего сайта, выше на страницах поисковых систем.</div>	
 			</div>
 		</div>
