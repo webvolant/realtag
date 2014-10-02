@@ -23,7 +23,6 @@ class WCategory(object):
         self.wid = wid
         self.wcount = wcount
         self.wname = wname
-    
     def __setitem__(self, key, item): 
         self.key = item
 

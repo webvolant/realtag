@@ -38,9 +38,18 @@ body{
     position: relative;
     top:15px;
     text-decoration: none;
+    font-weight: bold;
 
 }
-
+.prod img{
+    width:135px;
+    height: 5px;
+}
+.prod .right {
+    font-size: 10px;
+    position: relative;
+    top:10px;
+}
 .gmenu .col-xs-3 , .gmenubottom .col-xs-3{
     padding:0;
     margin:0;
@@ -58,6 +67,7 @@ body{
 .menu{
     color:#fff;
     font-size: 15px;
+
 }
 
 
@@ -261,6 +271,18 @@ body{
     color:#000;
 }
 
+.footer .nav-pills > li > a {
+    border-radius: 0px;
+    padding: 15px 10px;
+    color:#fff;
+}
+
+.footer .nav-pills > li > a:hover {
+    box-shadow: 0px 0px 8px -2px #000000;
+    background: #40a004;
+    color:#000;
+}
+
 
 .portimage{
     float:left;
@@ -329,6 +351,90 @@ span.gblue {
 }
 
 
+img.captcha {
+    padding:5px;
+}
+
+
+
+
+/**********/
+
+#slider-wrap{ /* Оболочка слайдера и кнопок */
+    width:660px; 
+    }
+#slider{ /* Оболочка слайдера */
+    width:640px;
+    height:360px;
+    overflow: hidden;
+    border:#eee solid 10px;
+    position:relative;}
+.slide{ /* Слайд */
+    width:100%;
+    height:100%;
+    }
+
+.ex img{
+    width:110px;
+}
+.sli-links{ /* Кнопки смены слайдов */
+    margin-top:10px;
+    text-align:center;}
+.sli-links .control-slide .ex{
+    margin: 0px;
+    color:#333;
+    width:140px;
+    height:160px;
+    border:6px solid white;
+    
+}
+.ex .text2 h5 {
+    font-size: 11px;
+}
+
+.control-slide span.z{
+    display: none;
+    
+}
+
+
+
+.sli-links .control-slide:hover div.ex{
+    cursor:pointer;
+    }
+
+.sli-links .control-slide.active div.ex{
+    border:6px solid green;}
+
+span.z ,.control-slide:hover span.z, .control-slide.active span.z{
+    display: none;
+    border: none;
+}
+
+span.control-slide {
+    color: white;
+}
+
+
+
+#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+    display:block;
+    width:15px;
+    height:100%;
+    position:absolute;
+    top:0;
+    overflow:hidden;
+    text-indent:-999px;
+    background:url(arrowBg.png) left center no-repeat;
+    opacity:0.8;
+    z-index:3;
+    outline:none !important;}
+#prewbutton{left:10px;}
+#nextbutton{
+    right:10px;
+    background:url(arrowBg.png) right center no-repeat;}
+#prewbutton:hover, #nextbutton:hover{
+    opacity:1;}
 
 
 
@@ -598,6 +704,30 @@ background-color: #9b9b9b;
 border-bottom:1px solid #F4F4F4;
 width: 70%;
 margin: 0 auto;
+}
+
+
+
+.leistungen .col-xs-2{
+    
+    
+    width:420px;
+    padding:20px;
+    font-size: 12px;
+    font-family:"Helvetica";
+    border-bottom:1px solid #F4F4F4;
+}
+
+.leistungen p{
+    text-align: left;
+}
+
+.leistungen img{
+    padding:6px;
+}
+
+.leistungen .col-xs-2 strong{
+    font-size: 14px;
 }
 
 

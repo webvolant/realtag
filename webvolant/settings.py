@@ -31,11 +31,11 @@ else:
 
 
 if LIVEHOST:
-    DEBUG = True
-    TEMPLATE_DEBUG = True
+    DEBUG = False
+    TEMPLATE_DEBUG = False
     #MEDIA_URL = 'http://static1.grsites.com/'
 else:
-    DEBUG = True
+    DEBUG = False
     TEMPLATE_DEBUG = True
     #MEDIA_URL = 'http://127.0.0.1:8000/static/'
 
@@ -43,7 +43,11 @@ else:
 THUMBNAIL_DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.127.0.0.1',  # Allow domain and subdomains
+    '.127.0.0.1.',  # Also allow FQDN and subdomains
+]
+
 
 
 # Application definition
@@ -136,6 +140,9 @@ else:
             'PORT': '3306',
         }
     }
+
+CAPTCHA_BACKGROUND_COLOR = 'white'
+CAPTCHA_FOREGROUND_COLOR = '#000'
 
 
 # Internationalization
