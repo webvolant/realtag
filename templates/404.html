@@ -1,5 +1,44 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
 
-{% block content %}
-<h3> This is my system 404 page </h3>
-{% endblock %}
+        <title>{% block title %}homepage{% endblock %} / web-сайт Баркалова Антона</title>
+
+        <meta content='{% block keywords %}{% endblock %}' name='keywords'/>
+        {% load filters %}
+        {% load bootstrap3 %}
+
+		{# Load CSS and JavaScript #}
+
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static "bootstrap.css" %}">
+		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "template.css" %}">
+
+
+
+
+	</head>
+
+	<body class="b404">
+					<div class="prod404">
+						<a href="/">БАРКАЛОВ АНТОН</br>
+						<img src="{% static "images/qwad.png" %}" /></a>
+						<div class="right">© barkalov.net Разработка и Сопровождение сайтов</div>
+					</div>
+
+		<h1 class="h404"> 404.html </h1>
+		<h3> Привет, такой станицы не существуют, наверно никогда и не было, я не знаю! </h3>
+		<a href="/"> Лучше всего, попробовать СНАЧАЛА! </a>
+
+		<div class="pic404">
+			<img src="{% static "images/404.png" %}" />
+		</div>
+
+	</body>
+
+</html>

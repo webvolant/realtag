@@ -214,6 +214,10 @@ body{
     margin-top:5px;
 }
 
+.DevSite{
+
+}
+
 .devs .col-xs-2{
     width:170px;
 }
@@ -232,6 +236,64 @@ body{
 
 .devs{
 }
+
+.rightblock{
+    color:white;
+    text-align: left;
+    font-size: 11px;
+    position: relative;
+    top:20px;
+}
+
+.rightblock p{
+    color:white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sli-links .col-xs-2{
+    padding:5px;
+    position: relative;
+    left:60px;
+}
+
+.qw{
+    width:130px;
+    height:100px;
+    background: #df352d;
+    position:relative;
+    top:-9px;
+}
+.qw2{
+    width:130px;
+    height:100px;
+    background: #ff9900;
+    position:relative;
+    top:-9px;
+}
+.qw3{
+    width:130px;
+    height:100px;
+    background: #27a500;
+    position:relative;
+    top:-9px;
+}
+.qw4{
+    width:130px;
+    height:100px;
+    background: #00bbd7;
+    position:relative;
+    top:-9px;
+}
+.qw5{
+    width:130px;
+    height:100px;
+    background: #005ad0;
+    position:relative;
+    top:-9px;
+}
+
+
 
 
 .more{
@@ -361,31 +423,33 @@ img.captcha {
 /**********/
 
 #slider-wrap{ /* Оболочка слайдера и кнопок */
-    width:660px; 
+    width:850px; 
     }
 #slider{ /* Оболочка слайдера */
-    width:640px;
-    height:360px;
+    width:800px;
+    height:300px;
     overflow: hidden;
-    border:#eee solid 10px;
-    position:relative;}
+    border-top:#eee solid 1px;
+    border-bottom:#eee solid 1px;
+    position:relative;
+margin-top:6px;}
 .slide{ /* Слайд */
     width:100%;
     height:100%;
     }
 
 .ex img{
-    width:110px;
+    width:130px;
 }
 .sli-links{ /* Кнопки смены слайдов */
-    margin-top:10px;
+    margin-top:0px;
     text-align:center;}
 .sli-links .control-slide .ex{
     margin: 0px;
     color:#333;
-    width:140px;
-    height:160px;
-    border:6px solid white;
+    width:143px;
+    height:115px;
+    border:2px solid white;
     
 }
 .ex .text2 h5 {
@@ -404,7 +468,7 @@ img.captcha {
     }
 
 .sli-links .control-slide.active div.ex{
-    border:6px solid green;}
+    border:2px solid #dfdfdf;}
 
 span.z ,.control-slide:hover span.z, .control-slide.active span.z{
     display: none;
@@ -415,7 +479,10 @@ span.control-slide {
     color: white;
 }
 
-
+.slide img{
+    width:800px;
+    height:300px;
+}
 
 #prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
     display:block;
@@ -435,6 +502,76 @@ span.control-slide {
     background:url(arrowBg.png) right center no-repeat;}
 #prewbutton:hover, #nextbutton:hover{
     opacity:1;}
+
+
+.prod404{
+    color:#333;
+    text-align:center;
+}
+.prod404 .right{
+    font-size: 11px;
+    text-align:center;
+}
+
+div.pic404 img {
+    width:300px;
+}
+
+div.pic404 img {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+h1.h404{
+    font-size: 96px;
+    color:#666;
+}
+
+body.b404{
+    padding:25px;
+}
+
+
+.text2q h5{
+    position: relative;
+    top:40px;
+    color:white;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

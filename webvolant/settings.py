@@ -33,22 +33,22 @@ else:
 if LIVEHOST:
     DEBUG = False
     TEMPLATE_DEBUG = False
+    ALLOWED_HOSTS = [
+    '.realtag.volant247.lclients.ru',  # Allow domain and subdomains
+    '.realtag.volant247.lclients.ru.',  # Also allow FQDN and subdomains
+    ]
     #MEDIA_URL = 'http://static1.grsites.com/'
 else:
-    DEBUG = False
+    DEBUG = True
     TEMPLATE_DEBUG = True
     #MEDIA_URL = 'http://127.0.0.1:8000/static/'
+    ALLOWED_HOSTS = [
+    '.127.0.0.1',  # Allow domain and subdomains
+    '.127.0.0.1.',  # Also allow FQDN and subdomains
+    ]
 
     
 THUMBNAIL_DEBUG = True
-
-
-ALLOWED_HOSTS = [
-    '.127.0.0.1',  # Allow domain and subdomains
-    '.127.0.0.1.',  # Also allow FQDN and subdomains
-]
-
-
 
 # Application definition
 
