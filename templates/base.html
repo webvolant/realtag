@@ -339,7 +339,7 @@
             //});
  
  var hwSlideSpeed = 500;
-var hwTimeOut = 7000;
+var hwTimeOut = 2000;
 var hwNeedLinks = true;
 
 		//для плана
@@ -365,9 +365,45 @@ var hwNeedLinks = true;
             slideNum = arrow;
             }
         $('.slide').eq(slideNum).slideDown(hwSlideSpeed, rotator);
-        $(".control-slide.active").removeClass("active");
-        $('.control-slide').eq(slideNum).addClass('active');
+        
+        if (slideNum==1){
+        	$(".control-slide").eq(slideNum).addClass('active1');
+        	$(".control-slide.active0").removeClass('active0');
+        	$(".control-slide.active2").removeClass('active2');
+        	$(".control-slide.active3").removeClass('active3');
+        	$(".control-slide.active4").removeClass('active4');
+
+        } else if(slideNum==0){
+        	$(".control-slide").eq(slideNum).addClass('active0');
+        	$(".control-slide.active1").removeClass('active1');
+        	$(".control-slide.active2").removeClass('active2');
+        	$(".control-slide.active3").removeClass('active3');
+        	$(".control-slide.active4").removeClass('active4');
         }
+     else if(slideNum==2){
+        	$(".control-slide").eq(slideNum).addClass('active2');
+        	$(".control-slide.active1").removeClass('active1');
+        	$(".control-slide.active0").removeClass('active0');
+        	$(".control-slide.active3").removeClass('active3');
+        	$(".control-slide.active4").removeClass('active4');
+        }
+     else if(slideNum==3){
+        	$(".control-slide").eq(slideNum).addClass('active3');
+        	$(".control-slide.active1").removeClass('active1');
+        	$(".control-slide.active2").removeClass('active2');
+        	$(".control-slide.active0").removeClass('active0');
+        	$(".control-slide.active4").removeClass('active4');
+        } else if(slideNum==4){
+        	$(".control-slide").eq(slideNum).addClass('active4');
+        	$(".control-slide.active1").removeClass('active1');
+        	$(".control-slide.active2").removeClass('active2');
+        	$(".control-slide.active3").removeClass('active3');
+        	$(".control-slide.active0").removeClass('active0');
+        }
+        //$(".control-slide.active").removeClass('active'+slideNum-1);
+        
+        //$('.control-slide').eq(slideNum).addClass('active'+slideNum);
+	}
 if(hwNeedLinks){
 var $linkArrow = $('<a id="prewbutton" href="#"></a><a id="nextbutton" href="#"></a>')
     .prependTo('#slider');      
@@ -384,7 +420,7 @@ var $linkArrow = $('<a id="prewbutton" href="#"></a><a id="nextbutton" href="#">
             $adderSpan += '<span class = "control-slide">' + index + '</span>';
         });
     $('<div class ="sli-links">' + $adderSpan +'</div>').appendTo('#slider-wrap');
-    $(".control-slide:first").addClass("active");
+    $(".control-slide:first").addClass("active0");
      
     $('.control-slide').click(function(){
     var goToNum = parseFloat($(this).text());
